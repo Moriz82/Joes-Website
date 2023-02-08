@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    background-color: #464e56;
+}
+
+select {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 150px;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 5px 5px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #17a2b8;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 5px 5px #999;
+}
+
+.button:hover {background-color: #17a2b8}
+
+.button:active {
+    background-color: #17a2b8;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    background-color: #343a40; /* Change background color to dark gray */
+    padding: 20px; /* Increase padding */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    color: white; /* Change text color to white */
+}
+
+.title {
+    font-size: 36px; /* Increase font size */
+    font-weight: bold;
+    text-align: center;
+    color: #17a2b8; /* Change text color to blue */
+}
+
+.scrollable-list {
+    background-color: #f2f2f2; /* Change background color to light gray */
+    height: 500px;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px; /* Add border radius */
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0px 0px 10px #ddd; /* Add shadow effect */
+}
+
+.search-section {
+    background-color: #f2f2f2; /* Change background color to light gray */
+    width: 20%;
+    padding: 20px; /* Increase padding */
+    text-align: center;
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0px 0px 10px #ddd; /* Add shadow effect */
+}
+.add-button {
+    background-color: #17a2b8; /* Change button color to blue */
+    color: white; /* Change text color to white */
+    border-radius: 10px; /* Add border radius */
+    padding: 10px 20px; /* Increase padding */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #ddd; /* Add shadow effect */
+}
+
+.add-button:hover {
+    background-color: #138496; /* Change button color on hover */
+}
+
+@media (max-width: 992px) {
+    .title {
+        font-size: 18px;
+    }
+
+    img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .scrollable-list {
+        height: 400px;
+        width: 100%;
+        margin: 0;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .search-section {
+        width: 100%;
+    }
+}
