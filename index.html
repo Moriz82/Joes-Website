@@ -13,7 +13,9 @@
         <div class="header row">
             <div class="title col-8">Joe's Dog Website</div>
             <div class="col-4">
-                <button id="add-button" class="button">Add Your Dog</button>
+                <button id="add-button" class="button" data-toggle="modal" data-target="#exampleModal">
+                    Add Your Dog
+                </button>
             </div>
         </div>
         <div class="row">
@@ -23,21 +25,89 @@
 
                 <input style="margin-bottom: 20px; margin-top: 20px" type="text" id="search" placeholder="Search" />
 
-                <select style="margin-bottom: 20px;" id="country-dropdown">
-                    <option value="">Select Country</option>
-                </select>
+                <div class="dropdown" style="margin-bottom: 20px;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort By Country
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <input type="text" id="dropdownSearch" placeholder="Search...">
+                        <div class="dropdown-divider"></div>
+                        <div id="country-dropdown">
+                        </div>
+                    </div>
+                </div>
 
-                <select style="margin-bottom: 20px;" id="state-dropdown">
-                    <option value="">Select State</option>
-                </select>
+                <div class="dropdown" style="margin-bottom: 20px;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort By State
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <input type="text" id="dropdownSearch" placeholder="Search...">
+                        <div class="dropdown-divider"></div>
+                        <div id="state-dropdown">
+                        </div>
+                    </div>
+                </div>
 
-                <select style="margin-bottom: 20px;" id="city-dropdown">
-                    <option value="">Select City</option>
-                </select>
+                <div class="dropdown" style="margin-bottom: 20px;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sort by City
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <input type="text" id="dropdownSearch" placeholder="Search...">
+                        <div class="dropdown-divider"></div>
+                        <div id="city-dropdown">
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Add Image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="imageLink">Image Link</label>
+                            <input type="text" class="form-control" id="imageLink" aria-describedby="imageLinkHelp" placeholder="Enter image link">
+                            <small id="imageLinkHelp" class="form-text text-muted">Enter a direct link to the image file.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter name">
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" class="form-control" id="country" placeholder="Enter country">
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="Enter state">
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter city">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     </body>
     <script src="script.js"></script>
 </html>

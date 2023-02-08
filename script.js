@@ -63,10 +63,11 @@ images.forEach(function(image) {
 });
 
 uniqueCountries.sort().forEach(function(country) {
-    const option = document.createElement("option");
+    const option = document.createElement("a");
     option.value = country;
     option.text = country;
-    countryDropdown.add(option);
+    option.classList.add("dropdown-item");
+    countryDropdown.appendChild(option);
 });
 
 countryDropdown.addEventListener("change", function() {
@@ -93,10 +94,11 @@ images.forEach(function(image) {
 });
 
 uniqueStates.sort().forEach(function(state) {
-    const option = document.createElement("option");
+    const option = document.createElement("a");
     option.value = state;
     option.text = state;
-    stateDropdown.add(option);
+    option.classList.add("dropdown-item");
+    stateDropdown.appendChild(option);
 });
 
 stateDropdown.addEventListener("change", function() {
@@ -123,10 +125,11 @@ images.forEach(function(image) {
 });
 
 uniqueCities.sort().forEach(function(city) {
-    const option = document.createElement("option");
+    const option = document.createElement("a");
     option.value = city;
     option.text = city;
-    cityDropdown.add(option);
+    option.classList.add("dropdown-item");
+    cityDropdown.appendChild(option);
 });
 
 cityDropdown.addEventListener("change", function() {
@@ -142,6 +145,19 @@ cityDropdown.addEventListener("change", function() {
         });
 });
 
+const dropdownSearch = document.querySelector('#dropdownSearch');
+const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+dropdownSearch.addEventListener('keyup', () => {
+    const searchTerm = dropdownSearch.value.toLowerCase();
+    dropdownItems.forEach((item) => {
+        if (item.textContent.toLowerCase().includes(searchTerm)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
 
 
 addButton.addEventListener("click", function () {

@@ -3,6 +3,10 @@ body {
     background-color: #464e56;
 }
 
+.modal-dialog {
+    max-width: 500px;
+}
+
 select {
     font-size: 16px;
     padding: 10px;
